@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Project: Event invite</title>
+        <style>
+            header{
+                height: 15vh;
+                background-color: aquamarine;
+            }
+            @keyframes moving {
+                0%{
+                    left:  45vw;
+                }
+                100%{
+                    left: 85vw;
+                }
+            }
+            #bear{
+                float:left;
+                margin-right: 3vw;
+                margin-bottom: 3vw;;
+                height: 30vh;
+            }
+            #cowboy{
+                position:absolute;
+                top: 20vh;
+                width: 15vw;
+                animation-name: moving;
+                animation-duration: 5s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+            }
+            #details{
+                position: relative; 
+                width: 30vw;
+                height: 30vh;
+                margin-bottom: 3vw;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>You're invited!</h1>
+            <h2>To Maksim's birthday</h2>
+        </header>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIQfWGtLebG5JCGVAv9kpBTU0qWbS1R5sJ9g&s" id="bear">
+        <div id="details">
+            <p>The details:</p>
+            <ul>
+                <li>kvas</li>
+                <li>boardgames</li>
+                <li>pizza</li>
+                <li>jokes</li>
+            </ul>
+        </div>
+        <img src="https://64.media.tumblr.com/bdcd75a1aab889887222de90a1ed8246/tumblr_inline_ppm6bn5RHM1rtx1y2_1280.gifv" id="cowboy">
+        <a href="https://go.2gis.com/yM5g4">Adress is here guys</a>
+    </body>
+</html>
