@@ -7,7 +7,7 @@ a{
     text-decoration: none;
     color: #262626;
     font-size: 13px;
-    padding: 1vh;
+    padding: 2vh 1vh;
     border: 1px dashed #fff;
 }
 a:hover{
@@ -22,9 +22,12 @@ h1{
 }
 
 header{
-    padding: 0 5vw;
+    padding: 1px 5vw;
     display: flex;
     justify-content: space-between;
+}
+header a{
+    height: 3vh;
 }
 #main_part{
     display: flex;
