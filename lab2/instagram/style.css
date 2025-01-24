@@ -75,6 +75,7 @@ input{
     caret-color: #b3b9bd;
     margin-bottom: 1vh;
     border-radius: 2px;
+    color: rgb(245, 245, 245);
 }
 input:hover{
     border: 1px solid #606770;;
