@@ -15,7 +15,7 @@ function addListItem() {
 
     //creation
     let li = document.createElement("li");
-
+    //li
     let checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.onclick = function () {
