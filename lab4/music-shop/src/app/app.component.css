@@ -1,0 +1,8 @@
+.brand-logo{
+    width: 15vw;
+}
+header{
+    background-color: #e1c69b;
+    display: flex;
+    justify-content: space-between;
+}
