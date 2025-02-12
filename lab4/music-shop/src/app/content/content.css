@@ -1,0 +1,18 @@
+.results{
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search{
+    position: absolute;
+    top: 2vh;
+    right: 2vw;
+    width: 20vw;
+}
+.search form{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
