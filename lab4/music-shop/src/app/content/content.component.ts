@@ -11,8 +11,8 @@ import { FormsModule } from '@angular/forms';
     template: `
       <section class="search">
         <form>
-          <input class="input-place" type="text" placeholder="Filter by name" [(ngModel)]="filter">
-          <button class="primary" type="button" (click)="filterResults(filter)">Search</button>
+          <input class="input-place" type="text" placeholder="Filter by name" #filter>
+          <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
         </form>
       </section>
       <section class="results">

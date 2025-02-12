@@ -13,7 +13,7 @@ export class MusicsService {
     return await data.json() ?? [];
   }
   async getProductById(id: Number) : Promise<Product>  {
-    const data = await fetch(`${this.url}/${id.toString()}`);
+    const data = await fetch(`${this.url}/${id}`);
     return await data.json() ?? [];
   }
 }
