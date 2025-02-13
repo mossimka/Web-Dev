@@ -45,9 +45,32 @@
     border: 1px #3c5654 solid;
     padding: 5vw;
     margin-bottom: 10vh;
-    height: 30vh;
+    height: 40vh;
     justify-content: space-around;
     width: 65vw;
+}
+
+.kaspi{
+    border: 1px #f14635 solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    height: 5vh;
+}
+.kaspi a{
+    color: #f14635;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 9vw;
+}
+.kaspi a:visited{
+    color: #7d0b01;
+}
+.kaspi a img{
+    width: 2vw;
 }
 .details-share{
     width: 5vw;

@@ -12,4 +12,5 @@ export interface Product {
     telegram: string;
     whatsapp: string;
     rating: number;
+    likes: number;
 }

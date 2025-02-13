@@ -29,6 +29,7 @@ import { RouterModule } from '@angular/router';
           <p>Country: {{product?.country}}</p>
           <p>Available units: {{product?.availableUnits}}</p>
         </div>
+        <button class="kaspi"><a [href]="product?.link" target="_blank">Order on Kaspi <img src="https://companieslogo.com/img/orig/KKS.F-9d710a31.png?t=1720244492"></a></button>
         <h3>Share:</h3>
         <div class="details-share">
           <a class="telegram" [href]="product?.telegram" target="_blank"></a>

@@ -1,6 +1,6 @@
 .listing{
     width: 23vw;
-    height: 60vh;
+    height: 63vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -18,9 +18,10 @@
     border-bottom-left-radius: 5px;
 }
 .listing-photo-frame{
-    height: 35vh;
+    height: 38vh;
     width: 21vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -39,4 +40,16 @@
 }
 .primary{
     width: 10vw;
+}
+
+.likes{
+    position: relative; 
+    display: flex;
+    align-items: center;
+}
+.likes:hover{
+    cursor: pointer;
+}
+.likes img{
+    width: 3vh;
 }
