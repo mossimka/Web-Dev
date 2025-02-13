@@ -16,13 +16,17 @@ import { FormsModule } from '@angular/forms';
         </form>
       </section>
       <section class="categories">
-        <div></div>
+        <div *ngFor="let category of categories">
+          <button class="category-button" [class.active]="selectedCategories.includes(category)" (click)="toggleCategory(category)">{{category}}</button>
+        </div>
       </section>
-      <section class="results">
-          <div *ngFor="let product of filteredProductsList">
-            <app-shop-items [product]="product"></app-shop-items>
-          </div>
-      </section>
+      <div class="div-results">
+        <section class="results">
+            <div *ngFor="let product of filteredProductsList">
+              <app-shop-items [product]="product"></app-shop-items>
+            </div>
+        </section>
+      </div>
     `,
     styleUrl: `./content.css`,
   })
@@ -32,6 +36,7 @@ import { FormsModule } from '@angular/forms';
     filteredProductsList: Product[] = [];
     filter: string;
     categories: string[] = [];
+    selectedCategories: string[] = [];
 
     constructor() {
       this.musicService.getAllProducts().then((productsList: Product[]) => {
@@ -47,15 +52,48 @@ import { FormsModule } from '@angular/forms';
 
     filterResults(text:string) {
       if (!text) {
-        this.filteredProductsList = this.productsList;
+        this.applyFilters();
         return;
       }
   
       this.filteredProductsList = this.productsList.filter(product =>
         product?.name.toLowerCase().includes(text.toLowerCase())
       );
-      this.filter = '';
+      this.applyCategoryFilter();
     }
+    toggleCategory(category: string) {//switching category
+      const index = this.selectedCategories.indexOf(category);
+      if (index > -1) {
+        this.selectedCategories.splice(index, 1);
+      } else {
+        this.selectedCategories.push(category);
+      }
+      this.applyFilters();
+    }
+    private applyFilters() {
+      let filtered = this.productsList;
+  
+      if (this.filter) {
+        filtered = filtered.filter(product =>
+          product?.name.toLowerCase().includes(this.filter.toLowerCase())
+        );
+      }
+      
+      if (this.selectedCategories.length > 0) {
+        filtered = filtered.filter(product =>
+          this.selectedCategories.includes(product.type)
+        );
+      }
+      this.filteredProductsList = filtered;
+    }
+    private applyCategoryFilter() {
+      if (this.selectedCategories.length === 0) {
+        return;
+      }
+      this.filteredProductsList = this.filteredProductsList.filter(product =>
+        this.selectedCategories.includes(product.type)
+      );
   }
+}
 
   
