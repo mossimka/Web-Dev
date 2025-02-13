@@ -16,4 +16,14 @@ export class MusicsService {
     const data = await fetch(`${this.url}/${id}`);
     return await data.json() ?? [];
   }
+  async getAllCategories() : Promise<string[]> {
+    const data = await this.getAllProducts();
+    const categories = new Set<string>();
+
+    data.forEach(product => {
+      categories.add(product.type);
+    });
+
+    return Array.from(categories);
+  }
 }

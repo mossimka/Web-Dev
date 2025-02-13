@@ -15,6 +15,9 @@ import { FormsModule } from '@angular/forms';
           <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button>
         </form>
       </section>
+      <section class="categories">
+        <div></div>
+      </section>
       <section class="results">
           <div *ngFor="let product of filteredProductsList">
             <app-shop-items [product]="product"></app-shop-items>
@@ -28,6 +31,7 @@ import { FormsModule } from '@angular/forms';
     musicService: MusicsService = inject(MusicsService);
     filteredProductsList: Product[] = [];
     filter: string;
+    categories: string[] = [];
 
     constructor() {
       this.musicService.getAllProducts().then((productsList: Product[]) => {
@@ -35,6 +39,10 @@ import { FormsModule } from '@angular/forms';
         this.filteredProductsList = productsList;
       });
       this.filter = '';
+      this.musicService.getAllCategories().then(cats => {
+        this.categories = cats;
+        console.log(this.categories);
+      });
     }
 
     filterResults(text:string) {
