@@ -23,7 +23,7 @@ import { FormsModule } from '@angular/forms';
     <div class="div-results">
       <section class="results">
           <div *ngFor="let product of filteredProductsList">
-           <app-shop-items class="shop-items" [product]="product" (productRemoved)="onProductRemoved($event)"></app-shop-items>
+           <app-shop-items [product]="product" (productRemoved)="onProductRemoved($event)"></app-shop-items>
           </div>
       </section>
     </div>
