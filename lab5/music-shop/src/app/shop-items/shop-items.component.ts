@@ -1,8 +1,7 @@
-import { Component, Input, inject } from '@angular/core';
+import { Component, Input, Output, EventEmitter, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Product } from '../product';
 import { RouterModule } from '@angular/router';
-import { MusicsService } from '../musics.service';
 
 @Component({
   selector: 'app-shop-items',
@@ -12,7 +11,10 @@ import { MusicsService } from '../musics.service';
     <section class="listing">
       <div class="listing-photo-frame">
         <img class="listing-photo" [src]="product.photo" alt="Photo of: {{ product.name }}">
-        <div class="likes" (click)="like()"><img src="/assets/like-icon.png"> {{product.likes}}</div>
+        <div class="actions">
+          <div div class="likes" (click)="like()"><img src="/assets/like-icon.png"> {{product.likes}}</div>
+          <p class="remove" (click)="remove()">🗑</p>  
+        </div>
       </div>
       <div class="listing-info">
         <h2 class="listing-heading"> {{ product.name }} </h2>
@@ -26,9 +28,12 @@ import { MusicsService } from '../musics.service';
 })
 export class ShopItemsComponent {
   @Input() product!:Product;
-  private musicService: MusicsService = inject(MusicsService);
+  @Output() productRemoved = new EventEmitter<Number>();
 
   like(){
     this.product.likes++;
+  }
+  remove(){
+    this.productRemoved.emit(this.product.id);
   }
 }

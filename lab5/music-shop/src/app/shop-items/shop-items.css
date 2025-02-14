@@ -42,6 +42,11 @@
     width: 10vw;
 }
 
+.actions{
+    display: flex;
+    justify-content: space-between;
+    width: 22vw;
+}
 .likes{
     position: relative; 
     display: flex;
@@ -49,7 +54,15 @@
 }
 .likes:hover{
     cursor: pointer;
+    color: black;
 }
 .likes img{
     width: 3vh;
+}
+.remove{
+    font-size: 30px;
+}
+.remove:hover{
+    color: black;
+    cursor: pointer;
 }
