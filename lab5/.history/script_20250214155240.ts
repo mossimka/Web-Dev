@@ -6,3 +6,8 @@ interface Person{
 function greet(person: Person): string {
   return "Hello " + person.name;
 }
+
+Person p = {
+    name: "gLEB";
+    age: 100;
+}
