@@ -1,0 +1,10 @@
+.albums{
+  width: 98.9vw;
+  color: azure;
+  background-color: #051000;
+  min-height: 100vh;
+}
+
+.album a{
+  color: azure;
+}

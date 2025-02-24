@@ -1,0 +1,52 @@
+{
+  "albums": [
+    {
+      "id": 0,
+      "title": "Mountains",
+      "description": "Just photos of mountains",
+      "photoUrls": [
+        "https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg",
+        "https://www.muchbetteradventures.com/magazine/content/images/2024/04/mount-everest-at-sunset-1.jpg",
+        "https://www.atlasandboots.com/wp-content/uploads/2019/05/ama-dablam2-most-beautiful-mountains-in-the-world.jpg",
+        "https://i.natgeofe.com/n/c9107b46-78b1-4394-988d-53927646c72b/1095_3x4.jpg",
+        "https://worldwildschooling.com/wp-content/uploads/2024/05/Mountains-in-the-US_Grand-Teton-Wyoming_Kennytong_Adobe-Stock-Photo_67602283.webp"
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Concerts",
+      "description": "Photos from concerts that I had been",
+      "photoUrls": [
+        "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-102280-006REM_timeline.jpg?w=623",
+        "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-black-sabbath-e777e412-7a2a-4782-b108-63871f9a2976.jpg",
+        "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-197082-74349019.jpg",
+        "https://www.rollingstone.com/wp-content/uploads/2019/01/beatles-live-1964.jpg?w=1581&h=1054&crop=1",
+        "https://i.redd.it/jq5n3fxqwlfb1.jpg",
+        "https://www.zelenograd.ru/img/b/1/7/b173496ab06be2e2da13f5ae82f37a86.jpg",
+        "https://img.gazeta.ru/files3/275/20045275/upload-15__1_-pic_32ratio_900x600-900x600-37350.jpg",
+        "https://www.rollingstone.com/wp-content/uploads/2018/06/rs-219695-GettyImages-84881427.jpg"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Hobby",
+      "description": "Some inspiration photos",
+      "photoUrls": [
+        "https://collegeinfogeek.com/wp-content/uploads/2018/11/Essential-Books.jpg",
+        "https://preview.redd.it/1vuo5en912171.jpg?width=640&crop=smart&auto=webp&s=0bfe029983c346a117c255490c061e773eea7899",
+        "https://dshowmusic.com/wp-content/uploads/2021/10/cort-gold-oc8-orchestra-model-acoustic-electric-guitar-00-1140x500.jpg",
+        "https://leplants.ru/static/cache/b8/e0/b8e06c12af245d161d1672d055789b1e.jpg"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Eyes",
+      "description": "Photos of beautiful peoples eyes",
+      "photoUrls": [
+        "https://images.unsplash.com/photo-1617339860632-f53c5b5dce4d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YmVhdXRpZnVsJTIwZXllfGVufDB8fDB8fHww",
+        "https://www.shutterstock.com/image-photo/closeup-blue-human-eye-600nw-2476598893.jpg",
+        "https://www.viewbug.com/media/mediafiles/2013/10/27/4834619_large1300.jpg"
+      ]
+    }
+  ]
+}

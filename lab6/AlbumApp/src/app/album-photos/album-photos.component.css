@@ -1,0 +1,15 @@
+.photos{
+  display: flex;
+  width: 98.9vw;
+  flex-wrap: wrap;
+  background-color: #051000;
+  height: 100vh;
+}
+.photo-li{
+  width: 25vw;
+  height: 18vw;
+  margin: 2.5vw 0vw 2.5vw 6vw;
+  object-fit: cover;
+  object-position: center;
+  box-shadow: 0 0 2vh black ;
+}

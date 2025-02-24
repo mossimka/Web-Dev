@@ -1,0 +1,39 @@
+header{
+  background-color: darkseagreen;
+  height: 8vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #051000;
+  padding: 0 2rem;
+}
+header h1{
+  color: #051000;
+  background-color: transparent;
+}
+main{
+  background-color: #051000;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20vw;
+  background-color: transparent;
+}
+nav a{
+  text-decoration: none;
+  border: #051000 3px solid;
+  padding: 1vh;
+  border-radius: 7px;
+  color: azure;
+  background-color: #051000;
+  width: 5vw;
+  text-align: center;
+}
+nav a:hover{
+  border-color: #446541;
+  color: #446541;
+  box-shadow: 0 0 0.5vh #000000;
+}
+

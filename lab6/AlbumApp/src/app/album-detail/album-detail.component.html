@@ -1,0 +1,6 @@
+<div *ngIf="album" class="album-div">
+  <h2>{{ album?.title }}</h2>
+  <h3>{{ album?.description }}</h3>
+  <img *ngIf="album?.photoUrls?.[0]" src="{{ album?.photoUrls?.[0] }}" alt="Album Photo">  <a *ngIf="album?.id" [routerLink]="['/albums', album?.id, 'photos']">View Photos</a>
+</div>
+<div *ngIf="!album">Loading...</div>
