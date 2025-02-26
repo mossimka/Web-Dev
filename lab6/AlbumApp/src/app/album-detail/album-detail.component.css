@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #051000;
+  background-color: #000000;
   color: azure;
   flex-direction: column;
   min-height: 100vh;
@@ -13,4 +13,15 @@
 }
 .album-div a{
   color: azure;
+}
+
+.name{
+  display: flex;
+  width: 10vw;
+  align-items: center;
+  justify-content: space-between;
+}
+.name img{
+  height: 2.5vh;
+  width: 2.5vh;
 }

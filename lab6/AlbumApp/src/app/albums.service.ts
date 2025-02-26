@@ -28,3 +28,8 @@ export class AlbumsService {
     return photos;
   }
 }
+/*getAllAlbums() : Observable<Album[]> {
+  const data = await fetch(this.url); return data.json() ?? [];
+  return this.client.get<Album[]>(this.url);
+}
+*/
