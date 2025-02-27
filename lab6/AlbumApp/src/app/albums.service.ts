@@ -1,35 +1,25 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import {map, Observable} from 'rxjs';
 import { Album } from './album';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlbumsService {
-  url = 'http://localhost:3000/albums';
-  constructor() {}
+  url = 'https://my-json-server.typicode.com/mossimka/DB-for-lab6/albums';
 
-  async getAllAlbums() : Promise<Album[]> {
-    const data = await fetch(this.url);
-    return data.json() ?? [];
+  constructor(private http: HttpClient) {}
+
+  getAllAlbums(): Observable<Album[]> {
+    return this.http.get<Album[]>(this.url);
   }
 
-  async getAlbumByID(id: number) : Promise<Album> {
-    const data = await fetch(`${this.url}/${id}`);
-    return data.json() ?? [];
+  getAlbumByID(id: number): Observable<Album> {
+    return this.http.get<Album>(`${this.url}/${id}`);
   }
 
-  async getPhotosByID(id: number) : Promise<string[]> {
-    const data = await this.getAlbumByID(id);
-    const photos = new Array<string>();
-
-    data.photoUrls.forEach((photoUrl:string) => {
-      photos.push(photoUrl);
-    })
-    return photos;
+  getPhotosByID(id: number): Observable<string[]> {
+    return this.getAlbumByID(id).pipe(map(album => album.photoUrls || []));
   }
 }
-/*getAllAlbums() : Observable<Album[]> {
-  const data = await fetch(this.url); return data.json() ?? [];
-  return this.client.get<Album[]>(this.url);
-}
-*/

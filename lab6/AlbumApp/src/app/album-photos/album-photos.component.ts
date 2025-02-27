@@ -20,14 +20,14 @@ export class AlbumPhotosComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
+    const id = Number(this.route.snapshot.paramMap.get('id'));
 
-    this.albumService.getAlbumByID(id).then(album => {
+    this.albumService.getAlbumByID(id).subscribe(album => {
       this.album = album;
     });
 
-    this.albumService.getPhotosByID(id).then(photosUrls => {
-      this.photoUrls = photosUrls;
+    this.albumService.getPhotosByID(id).subscribe(photoUrls => {
+      this.photoUrls = photoUrls;
     });
   }
 }
