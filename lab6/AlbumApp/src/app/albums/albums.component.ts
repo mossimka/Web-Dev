@@ -36,22 +36,17 @@ export class AlbumsComponent implements OnInit {
 
   createAlbum() {
     if (this.newAlbumName.trim()) {
-      const newAlbum: Album = {
-        id: this.albums.length + 1,  // Generate a new ID (or use a better method)
-        title: this.newAlbumName,
-        description: '',  // Provide default values
-        photoUrls: []
-      };
+      this.albumService.createAlbum(this.newAlbumName).subscribe((newAlbum) => {
+        this.albums.push(newAlbum);
+      });
 
-      this.albums.push(newAlbum);
       this.newAlbumName = '';
       this.isPopupVisible = false;
     }
   }
   deleteAlbum(id: number) {
-    const index = this.albums.findIndex(album => album.id === id);
-    if (index !== -1) {
-      this.albums.splice(index, 1);
-    }
+    this.albumService.deleteAlbum(id).subscribe(() => {
+      this.albums = this.albums.filter(album => album.id !== id);
+    });
   }
 }

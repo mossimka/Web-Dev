@@ -36,12 +36,13 @@ export class AlbumDetailComponent implements OnInit {
     this.isPopupVisible = false;
   }
 
-  changeAlbum(album: Album | undefined) {
-    if (this.newAlbumName.trim()) {
-      // @ts-ignore
-      album.title = this.newAlbumName;
-      this.newAlbumName = '';
-      this.isPopupVisible = false;
+  changeAlbum() {
+    if (this.album && this.newAlbumName.trim()) {
+      this.albumService.updateAlbum(this.album.id, this.newAlbumName).subscribe(updatedAlbum => {
+        this.album = updatedAlbum;
+        this.newAlbumName = '';
+        this.isPopupVisible = false;
+      });
     }
   }
 }

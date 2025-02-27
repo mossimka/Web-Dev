@@ -14,12 +14,20 @@ export class AlbumsService {
   getAllAlbums(): Observable<Album[]> {
     return this.http.get<Album[]>(this.url);
   }
-
   getAlbumByID(id: number): Observable<Album> {
     return this.http.get<Album>(`${this.url}/${id}`);
   }
-
   getPhotosByID(id: number): Observable<string[]> {
     return this.getAlbumByID(id).pipe(map(album => album.photoUrls || []));
+  }
+
+  createAlbum(title: string): Observable<Album> {
+    return this.http.post<Album>(this.url, { title });
+  }
+  updateAlbum(id: number, title: string): Observable<Album> {
+    return this.http.put<Album>(`${this.url}/${id}`, { title });
+  }
+  deleteAlbum(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.url}/${id}`);
   }
 }
