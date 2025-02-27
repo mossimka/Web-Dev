@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import {ActivatedRoute, RouterLink} from '@angular/router';
 import { AlbumsService } from '../albums.service';
 import { Album } from '../album';
 import { NgForOf } from '@angular/common';
@@ -7,7 +7,7 @@ import { NgForOf } from '@angular/common';
 @Component({
   selector: 'app-album-photos',
   standalone: true,
-  imports: [NgForOf],
+  imports: [NgForOf, RouterLink],
   templateUrl: './album-photos.component.html',
   styleUrl: './album-photos.component.css'
 })

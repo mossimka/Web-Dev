@@ -12,7 +12,7 @@
       <h2>Albums list:</h2>
       <div class="album" *ngFor="let album of albums">
         <a [routerLink]="['/albums', album.id]">{{ album.title }}</a>
-        <img class="delete" src="assets/garbage.png" alt="delete">
+        <img class="delete" (click)="deleteAlbum(album.id)" src="assets/garbage.png" alt="delete">
       </div>
     </div>
   </div>

@@ -48,4 +48,10 @@ export class AlbumsComponent implements OnInit {
       this.isPopupVisible = false;
     }
   }
+  deleteAlbum(id: number) {
+    const index = this.albums.findIndex(album => album.id === id);
+    if (index !== -1) {
+      this.albums.splice(index, 1);
+    }
+  }
 }

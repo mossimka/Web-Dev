@@ -1,3 +1,6 @@
-<div class="photos">
-  <img *ngFor="let photoUrl of photoUrls" class="photo-li" [src]="photoUrl" alt="Album Photo">
+<button [routerLink]="['/albums', album?.id]" class="return-btn">Return</button>
+<div>
+  <div class="photos">
+    <img *ngFor="let photoUrl of photoUrls" class="photo-li" [src]="photoUrl" alt="Album Photo">
+  </div>
 </div>

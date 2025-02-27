@@ -36,6 +36,9 @@
 .delete{
   height: 2.5vh;
 }
+.delete:hover{
+  cursor: pointer;
+}
 
 
 .pop-up {
@@ -51,4 +54,8 @@
 .pop-up input {
   display: block;
   margin-bottom: 10px;
+}
+.pop-up button {
+  border: 1px solid #545454;
+  border-radius: 3px;
 }

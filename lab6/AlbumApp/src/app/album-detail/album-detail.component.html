@@ -1,7 +1,13 @@
+<button [routerLink]="['/albums']"  class="return-btn">Return</button>
 <div *ngIf="album" class="album-div">
   <div class="name">
     <h2>{{ album?.title }}</h2>
-    <img src="assets/pencil.png">
+    <img (click)="showPopup()" src="assets/pencil.png">
+  </div>
+  <div class="name-set" [hidden]="!isPopupVisible">
+    <input [(ngModel)]="newAlbumName" placeholder="Enter new name for the Album">
+    <button (click)="changeAlbum(this.album)">Rename</button>
+    <button (click)="closePopup()">Cancel</button>
   </div>
 
   <h3>{{ album?.description }}</h3>

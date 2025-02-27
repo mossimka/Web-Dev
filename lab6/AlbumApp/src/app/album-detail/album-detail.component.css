@@ -25,3 +25,30 @@
   height: 2.5vh;
   width: 2.5vh;
 }
+
+.name-set {
+  position: fixed;
+  top: 20%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.name-set input {
+  display: block;
+  margin-bottom: 10px;
+}
+.name-set button {
+  border: 1px solid #545454;
+  border-radius: 3px;
+}
+
+.return-btn{
+  position: fixed;
+  top: 10%;
+  left: 10%;
+  border: 1px solid #545454;
+  border-radius: 3px;
+}
