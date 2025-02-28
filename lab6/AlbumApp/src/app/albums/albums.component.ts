@@ -17,6 +17,9 @@ export class AlbumsComponent implements OnInit {
   albumService: AlbumsService = inject(AlbumsService);
   isPopupVisible = false;
   newAlbumName = '';
+  newAlbumDescription = '';
+  newAlbumPhotos:number = 1;
+  newAlbumImages:string[] = [];
 
   constructor() {}
 
@@ -32,16 +35,26 @@ export class AlbumsComponent implements OnInit {
 
   closePopup() {
     this.isPopupVisible = false;
+    this.newAlbumName = '';
+    this.newAlbumDescription = '';
+    this.newAlbumPhotos = 1;
+    this.newAlbumImages = [];
   }
 
   createAlbum() {
-    if (this.newAlbumName.trim()) {
-      this.albumService.createAlbum(this.newAlbumName).subscribe((newAlbum) => {
-        this.albums.push(newAlbum);
+    if (this.newAlbumName.trim() && this.newAlbumDescription.trim() && this.newAlbumImages.length > 0) {
+      const newAlbum: Album = {
+        id: Math.floor(Math.random() * 1000), // Dummy ID (should be handled by the backend)
+        title: this.newAlbumName,
+        description: this.newAlbumDescription,
+        photoUrls: this.newAlbumImages
+      };
+
+      this.albumService.createAlbum(newAlbum).subscribe((createdAlbum) => {
+        this.albums.push(createdAlbum);
       });
 
-      this.newAlbumName = '';
-      this.isPopupVisible = false;
+      this.closePopup();
     }
   }
   deleteAlbum(id: number) {

@@ -21,8 +21,8 @@ export class AlbumsService {
     return this.getAlbumByID(id).pipe(map(album => album.photoUrls || []));
   }
 
-  createAlbum(title: string): Observable<Album> {
-    return this.http.post<Album>(this.url, { title });
+  createAlbum(album: Album): Observable<Album> {
+    return this.http.post<Album>(this.url, album);
   }
   updateAlbum(id: number, title: string): Observable<Album> {
     return this.http.put<Album>(`${this.url}/${id}`, { title });

@@ -1,7 +1,7 @@
 <button [routerLink]="['/albums']"  class="return-btn">Return</button>
 <div *ngIf="album" class="album-div">
   <div class="name">
-    <h2>{{ album?.title }}</h2>
+    <h2>{{ album.title }}</h2>
     <img (click)="showPopup()" src="assets/pencil.png">
   </div>
   <div class="name-set" [hidden]="!isPopupVisible">
@@ -10,8 +10,8 @@
     <button (click)="closePopup()">Cancel</button>
   </div>
 
-  <h3>{{ album?.description }}</h3>
-  <img *ngIf="album?.photoUrls?.[0]" src="{{ album?.photoUrls?.[0] }}" alt="Album Photo">
-  <a [routerLink]="['/albums', album?.id, 'photos']">View Photos</a>
+  <h3>{{ album.description }}</h3>
+  <img *ngIf="album?.photoUrls?.[0]" src="{{ album.photoUrls[0] }}" alt="Album Photo">
+  <a [routerLink]="['/albums', album.id, 'photos']">View Photos</a>
 </div>
 <div *ngIf="!album">Loading...</div>

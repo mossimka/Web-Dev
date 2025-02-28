@@ -4,6 +4,11 @@
       <button class="create-btn" (click)="showPopup()">Create Album</button>
       <div class="pop-up" [hidden]="!isPopupVisible">
         <input [(ngModel)]="newAlbumName" placeholder="Enter album name">
+        <input [(ngModel)]="newAlbumDescription" placeholder="Enter album description">
+        <input [(ngModel)]="newAlbumPhotos" placeholder="Enter album number of photos" type="number">
+        <div *ngFor="let i of [].constructor(newAlbumPhotos); let index = index">
+          <input [(ngModel)]="newAlbumImages[index]" placeholder="Enter a link to the photo">
+        </div>
         <button (click)="createAlbum()">Create</button>
         <button (click)="closePopup()">Cancel</button>
       </div>
