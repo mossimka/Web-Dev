@@ -3,8 +3,8 @@ import json
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 
-from .models import Company, Vacancy
-from .serializers import CompanySerializer, VacancySerializer
+from api.models import Company, Vacancy
+from api.serializers import CompanySerializer, VacancySerializer
 
 
 # Create your views here.
