@@ -7,7 +7,7 @@ import {Vacancy} from '../interfaces/vacancy';
 @Injectable({
   providedIn: 'root'
 })
-export class CompanyServiceService {
+export class CompanyService {
   private apiUrl = 'http://localhost:8000/api/companies/'
   constructor(private http: HttpClient) { }
 
