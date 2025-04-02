@@ -40,7 +40,7 @@ def get_company(request, id):
         company.delete()
         return Response({'message': 'Company deleted'}, status=status.HTTP_200_OK)
 
-@api_view(http_method_names = ['GET', 'PUT', 'DELETE'])
+@api_view(http_method_names = ['GET', 'POST'])
 def get_company_vacancies(request, id):
     try:
         company =  Company.objects.get(pk=id)
@@ -97,6 +97,7 @@ def get_vacancy(request, id):
         vacancy.delete()
         return Response({'message': 'Vacancy deleted'}, status=status.HTTP_200_OK)
 
+@api_view(http_method_names = ['GET'])
 def get_top_vacancies(request):
     if request.method == 'GET':
         top_vacancies = Vacancy.objects.order_by('-salary')[:10]
