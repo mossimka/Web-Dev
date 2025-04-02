@@ -13,8 +13,8 @@ class VacancySerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'description', 'salary', 'company')
 
 class CompanySerializerSimple(serializers.Serializer):
-    id = serializers.IntegerFiled()
+    id = serializers.IntegerField()
     name = serializers.CharField()
-    description = serializers.TextField()
-    city = serializers.CharFied()
-    address = serializers.TextField()
+    description = serializers.CharField()
+    city = serializers.CharField()
+    address = serializers.CharField()

@@ -30,7 +30,7 @@ class VacanciesListAPIView(generics.ListCreateAPIView):
     serializer_class = VacancySerializer
 
 class VacancyDetailAPIView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = Vacancy.get.objects.all()
+    queryset = Vacancy.objects.all()
     serializer_class = VacancySerializer
     lookup_utl_kwarg = 'id'
 
