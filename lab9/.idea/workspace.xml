@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ec38cca2-351a-4a19-8ad1-9d2bad56bade" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/hh_back/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/hh_back/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hh_back/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/hh_back/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hh_back/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/hh_back/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hh_back/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/hh_back/db.sqlite3" afterDir="false" />
-    </list>
+    <list default="true" id="ec38cca2-351a-4a19-8ad1-9d2bad56bade" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,21 +20,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "mossimka"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;mossimka&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/mossimka/Web-Dev.git",
-    "accountId": "339e0e42-b5c5-4de3-afc2-b4bbc3e893bb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/mossimka/Web-Dev.git&quot;,
+    &quot;accountId&quot;: &quot;339e0e42-b5c5-4de3-afc2-b4bbc3e893bb&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2v4N2XgI6gVAo8pmYuD7fFPPFrm" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -51,7 +46,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Максим/Documents/KBTU/Fourth_semester/WebDevelopment/Web-Dev/lab9",
+    "last_opened_file_path": "C:/Users/Максим/Documents/KBTU/Fourth_semester/WebDevMusic",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -102,6 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1743400179221</updated>
       <workItem from="1743400180359" duration="9224000" />
+      <workItem from="1743443897961" duration="11000" />
     </task>
     <servers />
   </component>
