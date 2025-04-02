@@ -1,1 +1,3 @@
-from .fbv import get_all_companies, get_company, get_company_vacancies, get_all_vacancies, get_vacancy, get_top_vacancies
+#from .fbv import get_all_companies, get_company, get_company_vacancies, get_all_vacancies, get_vacancy, get_top_vacancies
+#from .cbv import CompaniesListAPIView, CompanyDetailAPIView, CompanyVacanciesAPIView, VacanciesListAPIView, VacancyDetailAPIView, TopVacanciesAPIView
+from .generic import CompaniesListAPIView, CompanyDetailAPIView, CompanyVacanciesAPIView, VacanciesListAPIView, VacancyDetailAPIView, TopVacanciesAPIView
