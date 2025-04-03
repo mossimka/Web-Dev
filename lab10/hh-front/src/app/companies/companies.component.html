@@ -1,4 +1,5 @@
-<p>companies works!</p>
 <div *ngFor="let company of companies">
   <h3>{{company.name}}</h3>
+  <p>{{company.city}} - {{company.address}}</p>
+  <a [routerLink]="['/companies', company.id]">Show vacancies</a>
 </div>
