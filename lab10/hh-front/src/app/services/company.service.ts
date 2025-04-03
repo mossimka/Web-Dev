@@ -15,9 +15,10 @@ export class CompanyService {
     return this.http.get<Company[]>(this.apiUrl)
   }
   getCompanyDetails(id: string): Observable<Company> {
-    return this.http.get<Company>(`${this.apiUrl}/${id}`)
+    return this.http.get<Company>(`${this.apiUrl}${id}`)
   }
-  getCompanyVacancies(id: string): Observable<Vacancy[]> {
-    return this.http.get<Vacancy[]>(`${this.apiUrl}/${id}/vacancies`)
+
+  getCompanyVacancies(id: string | null): Observable<Vacancy[]> {
+    return this.http.get<Vacancy[]>(`${this.apiUrl}${id}/vacancies`)
   }
 }

@@ -1,0 +1,15 @@
+.vacancy-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px  solid;
+  border-radius: 5px;
+  width: 20vw;
+  height: 15vh;
+  margin: 3vh 5vh;
+}
+
+button{
+  width: 10vw;
+  margin: 1.5vh 5vh;
+}

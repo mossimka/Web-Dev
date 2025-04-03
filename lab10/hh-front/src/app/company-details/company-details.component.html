@@ -1,1 +1,6 @@
-<p>company-details works!</p>
+<button [routerLink]="['']">Go to main page</button>
+<div *ngFor="let vacancy of vacancies" class="vacancy-div">
+  <h4>{{vacancy.name}}</h4>
+  <h5>{{vacancy.salary}}</h5>
+  <p>{{vacancy.description}}</p>
+</div>
